@@ -1,0 +1,69 @@
+override: false
+
+scheme: Gemini
+
+sidebar:
+  position: left
+
+menu:
+  home: / || home
+  archives: /archives/ || archive
+  categories: /categories/ || th
+  tags: /tags/ || tags
+  about: /about/ || user
+  Netlify CMS: /admin || hdd-o
+
+avatar:
+  url: /images/avatar.jpeg
+
+social:
+  GitHub: https://github.com/BigaMachine || github
+  RSS: /atom.xml || rss
+
+social_icons:
+  enable: true
+  icons_only: true
+  transition: false
+
+creative_commons:
+  license: by-nc-nd
+  sidebar: false
+  post: true
+
+links:
+  #BGMC: https://bgmc.netlify.com
+
+links_settings:
+  icon: link
+  title: Links
+  layout: block
+
+follow_me:
+  #Twitter: https://twitter.com/username || twitter
+  #Telegram: https://t.me/channel_name || telegram
+  #WeChat: /images/wechat_channel.jpg || wechat
+  RSS: /atom.xml || rss
+
+footer:
+  since: 2020
+  icon:
+    name: heart
+    color: "#ff000088"
+  powered:
+    enable: false
+  theme:
+    enable: false
+
+motion:
+  enable: true
+  async: true
+
+fancybox: true
+
+lazyload: true
+
+seo: true
+
+baidu_push: true
+
+

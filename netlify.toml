@@ -1,0 +1,8 @@
+[build]
+  base = 'core/'
+  command = 'git submodule update --init --recursive && hexo generate --cwd core --debug'
+  publish = 'public/'
+
+[build.processing]
+  skip_processing = false
+

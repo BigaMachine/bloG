@@ -1,0 +1,63 @@
+backend:
+  name: git-gateway
+  #name: test-repo
+  branch: master
+
+publish_mode: editorial_workflow
+
+media_folder: "source/images"
+public_folder: "/images"
+
+collections:
+  - label: "Pages"
+    name: "Pages"
+    files:
+      - label: "About"
+        name: "About"
+        file: "source/about/index.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+      - label: "404"
+        name: "404"
+        file: "source/404.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+  - label: "Posts"
+    name: "Posts"
+    folder: "source/_posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD HH:mm"
+      - label: "Updated Date"
+        name: "updated"
+        widget: "datetime"
+        format: "YYYY-MM-DD HH:mm"
+        required: false
+      - label: "Permalink"
+        name: "permalink"
+        widget: "string"
+        required: false
+      - labbel: "Categories"
+        name: "categories"
+        widget: "list"
+        collapsed: false
+        hint: "Hint: \"Categories\" is a nested list, each sub-list forms its hierarchy."
+        field: {label: Category, name: category, widget: list, hint: "Hint: Seperated with a comma \",\" , and the former order the higher hierarchy."}
+        required: false
+      - labbel: "Tags"
+        name: "tags"
+        widget: "list"
+        hint: "Hint: \"Tags\" is non-nested, seperated with a comma \",\"."
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
